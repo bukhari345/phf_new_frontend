@@ -409,7 +409,7 @@ const DashboardContent: React.FC = () => {
     const fetchStats = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch('http://localhost:5000/api/applications/stats/summary');
+        const response = await fetch('http://16.171.43.146/api/applications/stats/summary');
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

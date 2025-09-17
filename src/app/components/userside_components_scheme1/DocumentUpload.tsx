@@ -60,7 +60,7 @@ export interface ExtractedData {
 }
 
 // API base URL
-const API_BASE_URL = 'http://16.170.252.236:8000';
+const API_BASE_URL = 'http://51.21.194.63:8000';
 
 // Document validation functions
 const validateDocument = (file: File, documentType: string): { isValid: boolean; message: string } => {

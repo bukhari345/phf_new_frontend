@@ -52,7 +52,7 @@ const DocumentVerification: React.FC = () => {
   const [documentVerificationStates, setDocumentVerificationStates] = useState<{ [key: string]: 'approved' | 'rejected' | 'pending' }>({});
   const [savingEditChanges, setSavingEditChanges] = useState(false);
 
-  const API_BASE_URL = 'http://localhost:5000/api';
+  const API_BASE_URL = 'http://16.171.43.146/api';
 
   const fetchApplications = async () => {
     try {

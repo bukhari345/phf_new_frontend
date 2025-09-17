@@ -76,7 +76,7 @@ const InspectionDetails: React.FC = () => {
     try {
       setLoading(true);
       setError(null);
-      const response = await fetch('http://localhost:5000/api/applications/');
+      const response = await fetch('http://16.171.43.146/api/applications/');
       
       if (!response.ok) {
         throw new Error('Failed to fetch applications');
@@ -118,7 +118,7 @@ const InspectionDetails: React.FC = () => {
       setError(null);
       
       // This is where I call the /:id/site-inspections endpoint
-      const response = await fetch(`http://localhost:5000/api/applications/${applicationId}/site-inspections`);
+      const response = await fetch(`http://16.171.43.146/api/applications/${applicationId}/site-inspections`);
       
       if (!response.ok) {
         throw new Error('Failed to fetch inspection details');

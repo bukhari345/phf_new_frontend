@@ -61,7 +61,7 @@ const LoanDetails: React.FC<LoanDetailsProps> = ({
     const [termsAccepted, setTermsAccepted] = useState<boolean>(false);
 
     // API base URL
-    const API_BASE_URL = process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:5000/api';
+    const API_BASE_URL = process.env.NODE_ENV === 'production' ? '/api' : 'http://16.171.43.146/api';
 
     // Get user info from storage and fetch application data
     useEffect(() => {

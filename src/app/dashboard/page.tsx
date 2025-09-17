@@ -16,7 +16,7 @@ import { Menu, X } from 'lucide-react';
 const getApiBaseUrl = (): string => {
   if (typeof window === 'undefined') {
     // Server-side
-    return process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+    return process.env.NEXT_PUBLIC_API_URL || 'http://16.171.43.146/api';
   }
   
   // Client-side
@@ -24,7 +24,7 @@ const getApiBaseUrl = (): string => {
     return process.env.NEXT_PUBLIC_API_URL || '/api';
   }
   
-  return 'http://localhost:5000/api';
+  return 'http://16.171.43.146/api';
 };
 
 const handleApiError = (error: unknown): string => {

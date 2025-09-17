@@ -218,7 +218,7 @@ const AuthenticationUI: React.FC = () => {
     setCheckingUniqueness(prev => ({ ...prev, [field]: true }));
     
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/check-unique`, {
+      const response = await fetch(`http://16.171.43.146/api/auth/check-unique`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -391,7 +391,7 @@ const handleRegister = async (): Promise<void> => {
       requestBody.specialization = manualSpecialization.trim();
     }
 
-    const response = await fetch("http://localhost:5000/api/auth/signup", {
+    const response = await fetch("http://16.171.43.146/api/auth/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -418,7 +418,7 @@ const handleRegister = async (): Promise<void> => {
     setIsLoggingIn(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/login", {
+      const response = await fetch("http://16.171.43.146/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -499,7 +499,7 @@ const PreviewDocuments: React.FC<PreviewDocumentsProps> = ({ extractedData, docu
       });
 
       // Submit to backend with authorization header
-      const response = await fetch('http://localhost:5000/api/applications/submit', {
+      const response = await fetch('http://16.171.43.146/api/applications/submit', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${authToken}`,
@@ -720,7 +720,7 @@ const PreviewDocuments: React.FC<PreviewDocumentsProps> = ({ extractedData, docu
 
 
 // API base URL
-const API_BASE_URL = 'http://16.170.252.236:8000/';
+const API_BASE_URL = 'http://51.21.194.63:8000';
 const BACKEND_URL = 'http://localhost:5000'; // Your backend URL
 
 

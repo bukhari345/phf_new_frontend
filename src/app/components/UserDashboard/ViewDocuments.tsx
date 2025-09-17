@@ -34,7 +34,7 @@ const ViewDocuments: React.FC<ViewDocumentsProps> = ({
     const [reuploadLoading, setReuploadLoading] = useState<boolean>(false);
     const [selectedFiles, setSelectedFiles] = useState<{ [key: string]: File }>({});
 
-    const API_BASE_URL = process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:5000/api';
+    const API_BASE_URL = process.env.NODE_ENV === 'production' ? '/api' : 'http://16.171.43.146/api';
 
     // Document type labels for better UX
     const documentTypeLabels: { [key: string]: string } = {

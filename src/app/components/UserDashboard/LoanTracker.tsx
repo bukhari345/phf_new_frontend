@@ -48,7 +48,7 @@ const LoanTracker: React.FC<LoanTrackerProps> = ({
     const [lastRefresh, setLastRefresh] = useState<Date>(new Date());
 
     // API base URL
-    const API_BASE_URL = process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:5000/api';
+    const API_BASE_URL = process.env.NODE_ENV === 'production' ? '/api' : 'http://16.171.43.146/api';
 
     // Fetch application status
     const fetchApplicationStatus = async () => {
