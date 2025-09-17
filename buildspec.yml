@@ -1,0 +1,29 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - n 18
+      - npm ci
+
+  build:
+    commands:
+      # run build step
+      - npm run build
+
+     
+
+      # deploy
+      - export EB_VERSION=PHF-DEV-FRONTEND-$(date +%Y-%m-%d-%H:%M)
+      # zip up the stuff we need
+      - zip -r $EB_VERSION.zip package.json dist .ebextensions .platform;
+
+  post_build:
+    commands:
+      - rm -rf node_modules
+
+artifacts:
+  files:
+    #- '**/*'
+    - dist/**/*
+    - package.json
+  name: PHF-DEV-FRONTEND-$(date +%Y-%m-%d-%H:%M)
